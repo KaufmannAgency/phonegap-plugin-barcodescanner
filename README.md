@@ -1,3 +1,17 @@
+## Fork notes (Paketti)
+
+This is the Kaufmann/NHG fork of [phonegap/phonegap-plugin-barcodescanner](https://github.com/phonegap/phonegap-plugin-barcodescanner)
+(upstream archived), forked at `bd82b3f` (2019-06-26, `8.1.1-dev`); no `upstream` remote is configured.
+Everything below this section is the unmodified upstream README.
+
+- **Branch: `master`** — one commit on top of upstream, `369da18` (2022-10-20): Gradle 7+ support
+  (`compile` → `implementation` in `src/android/barcodescanner.gradle`). No functional changes.
+- **Consumer:** `pake-front` (orderer app, `fi.kaufmann.paketti.tilaaja`), `cordova/package.json`
+  `github:KaufmannAgency/phonegap-plugin-barcodescanner` (no branch → default `master`; lock pins `369da18`),
+  used via `window.cordova.plugins.barcodeScanner.scan` in `src/forms/BarcodeScanner.ts` (QR codes in order forms).
+- Still depends on the legacy `com.android.support:support-v4:27.+`; pake-front relies on
+  `cordova-plugin-androidx-adapter` to make that build under AndroidX.
+
 # PhoneGap Plugin BarcodeScanner
 ================================
 
